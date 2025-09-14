@@ -23,6 +23,10 @@ The application demonstrates key skills in mobile development, including UI desi
 The project is built using **Clean Architecture** to ensure a clear separation of concerns, making the code maintainable, scalable, and testable.  
 The application is structured into the following layers:
 
+- **Core Layer**
+  This layer contains the foundational components and shared utilities of the application. It includes generic services like the API client for handling network requests, constants for managing app-wide strings and URLs, and themes for defining the application's color schemes and styling. This layer is designed to be independent and highly reusable.
+- **Data Layer**
+Responsible for fetching data from external sources. It implements the abstractions defined in the Domain layer. This layer includes the remote data source that directly interacts with the API, data models that parse the JSON into Dart objects, and the repository implementation that serves as the single source of truth for the Domain layer.
 - **Presentation Layer**  
   Manages the user interface and application state using the **BLoC** state management pattern.  
   It contains all the widgets, pages, and BLoC files.  
