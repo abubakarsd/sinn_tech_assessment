@@ -1,4 +1,4 @@
-// An abstract class defining the contract for API interactions
+// I made this abstract class in other to defining the contract for the API interaction
 abstract class ApiService {
   Future<dynamic> getUsers();
 }

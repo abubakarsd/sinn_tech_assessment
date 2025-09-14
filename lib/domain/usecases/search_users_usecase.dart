@@ -1,7 +1,7 @@
 import 'package:sinn_tech_assessment/domain/entities/user_entity.dart';
 import 'package:sinn_tech_assessment/domain/repositories/user_repository.dart';
 
-// Use case for searching users
+// for searching users
 class SearchUsersUseCase {
   final UserRepository _userRepository;
 
@@ -9,9 +9,9 @@ class SearchUsersUseCase {
 
   Future<List<UserEntity>> execute(String query) async {
     try {
-      // Get all users from the repository
+      // To get all users from the repository
       final allUsers = await _userRepository.getUsers();
-      // Filter the list based on the search query
+      // To filter the list based on the search query
       final filteredUsers = allUsers.where((user) {
         final lowerCaseQuery = query.toLowerCase();
         return user.name.toLowerCase().contains(lowerCaseQuery) ||
@@ -19,7 +19,6 @@ class SearchUsersUseCase {
       }).toList();
       return filteredUsers;
     } catch (e) {
-      // Re-throw the exception for the BLoC to handle
       throw Exception('Failed to search users from use case: $e');
     }
   }

@@ -1,7 +1,7 @@
 import 'package:equatable/equatable.dart';
 import 'package:sinn_tech_assessment/domain/entities/user_entity.dart';
 
-// The base class for all user states
+// base class for all user states
 abstract class UserState extends Equatable {
   const UserState();
 

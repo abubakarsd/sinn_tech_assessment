@@ -11,9 +11,7 @@ class UserRepositoryImpl implements UserRepository {
   @override
   Future<List<UserModel>> getUsers() async {
     try {
-      // Call the data source to get the raw data
       final userModels = await _remoteDataSource.getUsers();
-      // Return the list of UserModel objects
       return userModels;
     } catch (e) {
       // Re-throw the exception to be handled by the use case

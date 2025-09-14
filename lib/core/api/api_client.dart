@@ -8,15 +8,17 @@ class ApiClient {
   Future<dynamic> get(String path) async {
     try {
       final response = await _client.get(Uri.parse('${AppUrls.baseUrl}$path'));
-      
+
       if (response.statusCode == 200) {
         return json.decode(response.body);
       } else {
-        // Handle API errors gracefully
-        throw Exception('Failed to load data from the API: ${response.statusCode}');
+        // This handle the  API errors
+        throw Exception(
+          'Failed to load data from the API: ${response.statusCode}',
+        );
       }
     } catch (e) {
-      // Handle network errors
+      // this dandled network errors
       throw Exception('Network error: $e');
     }
   }

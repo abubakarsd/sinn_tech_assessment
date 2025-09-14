@@ -1,6 +1,6 @@
 import 'package:sinn_tech_assessment/domain/entities/user_entity.dart';
 
-// Represents the data model fetched directly from the API.
+// the data model for fetching directly from the API
 class UserModel extends UserEntity {
   const UserModel({
     required int id,
@@ -12,17 +12,17 @@ class UserModel extends UserEntity {
     required Address address,
     required Company company,
   }) : super(
-          id: id,
-          name: name,
-          username: username,
-          email: email,
-          phone: phone,
-          website: website,
-          address: address,
-          company: company,
-        );
+         id: id,
+         name: name,
+         username: username,
+         email: email,
+         phone: phone,
+         website: website,
+         address: address,
+         company: company,
+       );
 
-  // Factory constructor to create a UserModel from a JSON map.
+  // Constructor to create a UserModel from a JSON map
   factory UserModel.fromJson(Map<String, dynamic> json) {
     return UserModel(
       id: json['id'] as int,
