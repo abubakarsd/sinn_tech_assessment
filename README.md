@@ -40,7 +40,7 @@ Git: Git is required to clone the repository.
 Step 1: Clone the Repository
 Open your terminal or command prompt and run the following command to clone the project:
 
-git clone [repository_link]
+git clone [https://github.com/abubakarsd/sinn_tech_assessment.git]
 
 Step 2: Navigate to the Project Directory
 Move into the project folder using the cd command:
