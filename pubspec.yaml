@@ -1,5 +1,5 @@
 name: sinn_tech_assessment
-description: "A new Flutter project."
+description: A Flutter practical test for Sinn Tech.
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
@@ -34,13 +34,15 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
-  
-  # Added for the practical assessment
+  # For the API Integration
   http: ^1.2.1
+  # State Management
   flutter_bloc: ^9.1.1
+  # To check for Bloc states and events
   equatable: ^2.0.5
   google_fonts: ^6.1.0
   shimmer: ^3.0.0
+  get_it: ^7.6.4
 
 dev_dependencies:
   flutter_test:
